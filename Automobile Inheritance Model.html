@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    /* Implement using object.create() */
+    
+    const tataAutomobile={
+
+        carName:"Name",
+        bodyType:"Hatchback",
+        fuelType:"Petrol",
+        carMileage:"15 to 20 Kmpl",
+        carTransmission:"Automatic"
+    };
+
+    let carModel_1=Object.create(tataAutomobile,{carName: {value:"Tiago"}});
+    //carModel_1.carName="Tiago"; You can use this method also to set name.
+    let carModel_2=Object.create(tataAutomobile, {carName:{value:"Tiago NRG"}});
+    let carModel_3=Object.create(tataAutomobile, {carName: {value:"Altroz"}});
+    console.log(carModel_1);
+    console.log(carModel_2);
+    console.log(carModel_3);
+    
+    /* Implement using constructor functions() */
+
+    function TataAutomobile(name){
+        this.carName=name;
+        this.bodyType="Hatchback";
+        this.fuelType="Petrol";
+        this.carMileage="15 to 20 Kmpl";
+        this.carTransmission="Automatic";
+    }
+
+    let tataModel_1=new TataAutomobile("Tiago");
+    let tataModel_2=new TataAutomobile("Altroz");
+    let tataModel_3=new TataAutomobile("Tiago NRG");
+    console.log(tataModel_1);
+    console.log(tataModel_2);
+    console.log(tataModel_3);
+
+    
+    console.log(a);
+    let a=10;
+</script>
